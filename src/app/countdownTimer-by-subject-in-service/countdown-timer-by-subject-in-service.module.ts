@@ -5,13 +5,15 @@ import { TimerControlsComponent } from './timer-controls/timer-controls.componen
 import { TimerDisplayComponent } from './timer-display/timer-display.component';
 import { TimerClicksCountLogsComponent } from './timer-clicks-count-logs/timer-clicks-count-logs.component';
 import { TimerEventTimestampLogsComponent } from './timer-event-timestamp-logs/timer-event-timestamp-logs.component';
+import { CountdownBySubjectRoutingModule } from './countdown-timer-using-subject.routing.module';
 
 
 
 @NgModule({
   declarations: [TimerBaseComponent,TimerControlsComponent,TimerDisplayComponent,TimerClicksCountLogsComponent,TimerEventTimestampLogsComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    CountdownBySubjectRoutingModule
   ]
 })
 export class CountdownTimerBySubjectInServiceModule { }
