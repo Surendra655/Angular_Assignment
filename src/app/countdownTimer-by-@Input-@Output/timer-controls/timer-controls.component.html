@@ -1,0 +1,6 @@
+<button [disabled]="!isCounterActive" (click)='startCountdown();'>Start Timer</button>
+<button [disabled]="isCounterActive"  (click)='pauseOrReset.emit(false);isCounterActive=true'>Pause</button>
+<button [disabled]="countdown==0 || countdown==undefined" (click)='pauseOrReset.emit(true);isCounterActive=true'>Reset</button>
+<input type="number" placeholder="Enter Countdown Value" [(ngModel)]="countdown">
+
+{{pausedList|json}}

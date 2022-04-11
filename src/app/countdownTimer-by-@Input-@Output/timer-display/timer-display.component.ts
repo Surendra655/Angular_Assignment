@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-timer-display',
+  selector: 'app-counter-display',
   templateUrl: './timer-display.component.html',
   styleUrls: ['./timer-display.component.scss']
 })
 export class TimerDisplayComponent implements OnInit {
+  @Input() timeLeft;
 
   constructor() { }
 

@@ -1,0 +1,24 @@
+<div class="content-warp">
+    <div class="display">
+        <app-counter-display [timeLeft]="timeLeft"></app-counter-display>
+    </div>
+    <div class="controls">
+        <app-counter-controls 
+        (startTimer)="startTimer()" 
+        (pauseOrReset)="pauseOrReset($event)"
+        (timeLeft)="getTimeLimit($event)"
+        [resetStateValue]="timeLeft"
+        [pausedList]="pausedList"></app-counter-controls>
+    </div>
+    <div class="logs">
+        <app-counter-logs [eventLogs]="timerEvents"></app-counter-logs>
+    </div>
+    <div class="clicks">
+        <app-counter-clicks [clicksCount]="clicksCount"></app-counter-clicks>
+    </div>
+    </div>
+    
+    <button (click)="clearLogs()">clear logs</button>
+    
+    
+    
