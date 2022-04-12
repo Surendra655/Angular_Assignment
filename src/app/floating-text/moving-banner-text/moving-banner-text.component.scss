@@ -1,0 +1,46 @@
+div>div {
+    width: calc(100% - 0%);
+    border: 3px solid black;
+    padding: 28px;
+}
+h6{
+    margin-bottom: 18px;
+}
+#text {
+    padding: 8px 0px;
+}
+.text-container {
+    overflow: hidden;
+}
+
+.text-container h3 {
+    font-size: 20px;
+    margin: 0;
+    //  Starting position
+    -moz-transform: translateX(1%);
+    -webkit-transform: translateX(1%);
+    transform: translateX(1%);
+
+    // Animation to this element 
+    -moz-animation: text-container 8s linear infinite;
+    -webkit-animation: text-container 8s linear infinite;
+    animation: text-container 8s linear infinite;
+}
+
+@keyframes text-container {
+    0% {
+         //   Firefox 
+         -moz-transform: translateX(100%);
+         //    chrome
+         -webkit-transform: translateX(100%);
+         transform: translateX(100%);
+    }
+
+    100% {
+         //   Firefox 
+         -moz-transform:translateX(-55%);
+         //    chrome
+         -webkit-transform: translateX(-55%);
+         transform: translateX(-55%);
+    }
+}
