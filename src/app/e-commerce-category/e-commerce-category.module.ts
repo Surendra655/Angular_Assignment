@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { EcommerceRoutingModule } from './e-commerce.routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -9,7 +10,8 @@ import { EcommerceRoutingModule } from './e-commerce.routing.module';
   declarations: [ProductsListComponent],
   imports: [
     CommonModule,
-    EcommerceRoutingModule
+    EcommerceRoutingModule,
+    FormsModule
   ]
 })
 export class ECommerceCategoryModule { }

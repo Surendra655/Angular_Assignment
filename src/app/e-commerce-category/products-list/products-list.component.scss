@@ -1,0 +1,50 @@
+h6 {
+    margin-bottom: 18px;
+}
+
+
+.card {
+    margin-bottom: 1rem;
+}
+
+.active {
+    background-color: #32b6f4;
+}
+
+.btn-group {
+    z-index: 0;
+
+    button {
+        font-size: 20px;
+        padding: 3px 15px;
+    }
+}
+
+.form-select {
+    margin-left: 16px;
+}
+
+.list-view {
+    .row {
+        >[class*='col-'] {
+            max-width: 50%;
+            flex: 0 0 100%;
+        }
+    }
+
+    .card {
+        @media (max-width: 575.98px) {
+            flex-direction: column;
+        }
+
+        flex-direction: row;
+
+        >.card-img-top {
+            width: auto;
+        }
+
+        .card-body {
+            display: inline-block;
+        }
+    }
+}

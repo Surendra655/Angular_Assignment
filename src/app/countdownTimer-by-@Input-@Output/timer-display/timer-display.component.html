@@ -1,3 +1,14 @@
-<div>
-    {{(timeLeft==undefined || timeLeft==0)  ? '0000':timeLeft}}
+<div class="row justify-content-center ">
+    <div class="col align-self-center">
+        <p>
+            <strong>
+                Count Down Time
+            </strong>
+        </p>
+        <p class="time-text">
+            <strong>
+                {{(timeLeft==undefined || timeLeft==0) ? '0000':timeLeft}}
+            </strong>
+        </p>
     </div>
+</div>

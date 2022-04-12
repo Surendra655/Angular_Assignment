@@ -1,6 +1,13 @@
-<button [disabled]="!isCounterActive" (click)='startCountdown();'>Start Timer</button>
+
+
+<div class="row">
+    <label for="countdown" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" placeholder="Enter Countdown Value"   [(ngModel)]="countdown" id="countdown">
+    </div>
+
+    <button [disabled]="!isCounterActive" (click)='startCountdown();'>Start Timer</button>
 <button [disabled]="isCounterActive"  (click)='pauseOrReset.emit(false);isCounterActive=true'>Pause</button>
 <button [disabled]="countdown==0 || countdown==undefined" (click)='pauseOrReset.emit(true);isCounterActive=true'>Reset</button>
-<input type="number" placeholder="Enter Countdown Value" [(ngModel)]="countdown">
 
 {{pausedList|json}}

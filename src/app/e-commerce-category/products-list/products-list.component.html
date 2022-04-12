@@ -1,3 +1,37 @@
 <h6>
-    An e-commerce category page
+  An e-commerce products list category page
 </h6>
+<div class="row justify-content-end mb-3">
+  <div class="col-1">
+    <div class="btn-group" role="group" aria-label="view">
+      <button type="button" [class.active]="isList" (click)="changeView('list')"
+        class="btn btn-outline-info">&#9638;</button>
+      <button type="button" [class.active]="!isList" (click)="changeView('grid')"
+        class="btn btn-outline-info">&#9783;</button>
+    </div>
+  </div>
+  <div class="col-2">
+    <select class="form-select" (change)="onFilter($event.target.value)" aria-label="price filter">
+      <option selected disabled>Select Price Filter</option>
+      <option value="L-H">Price Low to High</option>
+      <option value="H-L">Price High to Low</option>
+    </select>
+  </div>
+  <div class="col-1"></div>
+</div>
+<div class="container" [ngClass]="isList ? 'grid-container' : 'list-view'">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-3" *ngFor="let item of products">
+      <div class="card">
+        <img class="card-img-top" src="https://picsum.photos/362/180" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{item.productName}}</h5>
+          <span class="card-text">Price: <strong>${{item.price}}</strong></span>
+          <!-- <span>Elctonics applicans basis goods required</span> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

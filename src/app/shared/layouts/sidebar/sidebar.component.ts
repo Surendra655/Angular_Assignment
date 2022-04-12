@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class SidebarComponent implements OnInit {
   menuItems: any = []
   isActive = 0
-  constructor(private router: Router) { }
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
     this.menuItems = [
@@ -23,6 +23,6 @@ export class SidebarComponent implements OnInit {
   }
   navigate(i:number, path:string) {
     this.isActive = i;
-    this.router.navigate([path])
+    this._router.navigate([path])
   }
 }
