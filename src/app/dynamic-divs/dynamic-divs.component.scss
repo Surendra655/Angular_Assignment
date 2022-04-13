@@ -1,0 +1,22 @@
+.div-warp {
+    height: 200px;
+    width: 200px;
+    margin: 12px;
+    border: 1px solid;
+}
+
+.div-warper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-left: 60px;
+    .div-container {
+        background-color: #f3f3f38f;
+        border: 2px solid #dbdbdb;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 10px;
+        height: 200px;
+        width: 200px;
+    }
+}

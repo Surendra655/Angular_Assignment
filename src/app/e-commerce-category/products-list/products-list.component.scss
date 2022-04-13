@@ -25,6 +25,9 @@ h6 {
 }
 
 .list-view {
+    img{
+        width: 320px !important;;
+    }
     .row {
         >[class*='col-'] {
             max-width: 50%;
