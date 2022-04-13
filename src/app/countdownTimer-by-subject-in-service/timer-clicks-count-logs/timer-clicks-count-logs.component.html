@@ -1,1 +1,32 @@
-<p>timer-clicks-count-logs works!</p>
+
+<div class="d-grid gap-2 d-md-flex justify-content-center">
+    <div class="row justify-content-center logs-warp">
+        <div class="col-12 align-self-center">
+            <span>Click's Tracker</span>
+        </div>
+        <div class="col-6 align-self-center">
+            <p class="time-text">
+                <strong>
+                    {{(eventLogs?.stated==undefined || eventLogs.stated==0) ? '00':eventLogs?.stated}}
+                </strong>
+            </p>
+            <p>
+                <strong>
+                    Started
+                </strong>
+            </p>
+        </div>
+        <div class="col-6 align-self-center">
+            <p class="time-text">
+                <strong>
+                    {{(eventLogs?.paused==undefined || eventLogs?.paused==0) ? '00':eventLogs?.paused}}
+                </strong>
+            </p>
+            <p>
+                <strong>
+                    Paused
+                </strong>
+            </p>
+        </div>
+    </div>
+</div>

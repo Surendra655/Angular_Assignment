@@ -1,1 +1,10 @@
-<p>timer-event-timestamp-logs works!</p>
+<div class="d-grid gap-2  d-md-flex justify-content-center">
+    <div class="logs-warp me-4">
+        <span>Timestamp Event Logs</span>
+        <ul>
+            <li *ngFor="let log of timeStamps">
+                {{log}}
+            </li>
+        </ul>
+    </div>
+</div>

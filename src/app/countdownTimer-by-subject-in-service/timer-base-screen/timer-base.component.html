@@ -1,1 +1,21 @@
-<p>timer-base works!</p>
+<h6>
+    A countdown timer with four sibling components by using Subject in Service.
+</h6>
+<div class="d-grid gap-2 d-md-flex justify-content-end mb-3 mt-2">
+    <button type="button" [disabled]="!timerEvents.length" (click)="clearLogs()" class="btn btn-info">Clear All
+        Logs</button>
+</div>
+<div class="row align-items-center">
+    <div class="col-5">
+        <app-display></app-display>
+    </div>
+    <div class="col-7">
+        <app-controls></app-controls>
+    </div>
+    <div class="col-5 pt-4">
+        <app-timestamps></app-timestamps>
+    </div>
+    <div class="col-7 pt-4">
+        <app-clicks></app-clicks>
+    </div>
+</div>

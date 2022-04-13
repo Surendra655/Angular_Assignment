@@ -1,0 +1,16 @@
+.logs-warp {
+    text-align: center;
+    overflow: auto;
+    background: #f3f3f3;
+    border-radius: 6px;
+    border: 1px solid #bfebff;
+    padding: 2px;
+    height: 200px;
+    width: auto;
+    max-width: 90%;
+    min-width: 300px;
+    ul {
+        list-style-type: none;
+        padding: 0px 8px;
+    }
+}
