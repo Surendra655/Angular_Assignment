@@ -1,3 +1,34 @@
-<div>
-    {{clicksCount | json}}
+<div class="d-grid gap-2 d-md-flex justify-content-center">
+
+    <div class="row justify-content-center logs-warp">
+        <div class="col-12 align-self-center">
+            <span>Click's Tracker</span>
+        </div>
+        <div class="col-6 align-self-center">
+            <p class="time-text">
+                <strong>
+                    {{(clicksCount?.stated==undefined || clicksCount.stated==0) ? '00':clicksCount.stated}}
+                </strong>
+            </p>
+            <p>
+                <strong>
+                    Started
+                </strong>
+            </p>
+
+        </div>
+        <div class="col-6 align-self-center">
+            <p class="time-text">
+                <strong>
+                    {{(clicksCount?.paused==undefined || clicksCount.paused==0) ? '00':clicksCount.paused}}
+                </strong>
+            </p>
+            <p>
+                <strong>
+                    Paused
+                </strong>
+            </p>
+
+        </div>
+    </div>
 </div>

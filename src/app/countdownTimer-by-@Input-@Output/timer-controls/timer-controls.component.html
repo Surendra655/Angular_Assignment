@@ -1,13 +1,36 @@
-
-
-<div class="row">
-    <label for="countdown" class="col-sm-2 col-form-label">Password</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" placeholder="Enter Countdown Value"   [(ngModel)]="countdown" id="countdown">
+<div class="row pt-4 base-warp">
+  <div class="col-11">
+    <div class="row">
+      <label for="countdown" class="col-3 col-form-label">Enter Timer Limit</label>
+      <div class="col-6">
+        <input type="number" class="form-control" placeholder="Enter Countdown Value" [(ngModel)]="countdown"
+          id="countdown">
+      </div>
     </div>
 
-    <button [disabled]="!isCounterActive" (click)='startCountdown();'>Start Timer</button>
-<button [disabled]="isCounterActive"  (click)='pauseOrReset.emit(false);isCounterActive=true'>Pause</button>
-<button [disabled]="countdown==0 || countdown==undefined" (click)='pauseOrReset.emit(true);isCounterActive=true'>Reset</button>
-
-{{pausedList|json}}
+    <div class="row p-2">
+      <div class="col offset-3">
+        <button [disabled]="!isCounterActive" class="btn btn-primary btn-sm" type="button"
+          (click)='startCountdown();'>Start</button>
+        <button [disabled]="isCounterActive" class="btn btn-secondary btn-sm ms-2" type="button"
+          (click)='pauseOrReset.emit(false);isCounterActive=true'>Pause</button>
+      </div>
+      <div class="col">
+        <button [disabled]="countdown==0 || countdown==undefined" class="btn btn-warning btn-sm" type="button"
+          (click)='pauseOrReset.emit(true);isCounterActive=true'>Reset</button>
+      </div>
+    </div>
+    <div class="col-12 ps-2">
+      <div class="d-grid gap-2 d-md-flex justify-content-start">
+        <div class="logs-warp">
+          <span><strong>Event Logs</strong></span>
+          <ul>
+            <li *ngFor="let log of pausedList">
+              {{log}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

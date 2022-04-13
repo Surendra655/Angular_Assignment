@@ -1,30 +1,22 @@
 <h6>
-    A countdown timer page with four sibling components by using Input and Output Decorators
+  A countdown timer page with four sibling components by using Input and Output Decorators
 </h6>
-<button (click)="clearLogs()">clear logs</button>
-<div class="row ">
-    <div class="col-5 custborder m-3">
-        <app-counter-display [timeLeft]="timeLeft"></app-counter-display>
-    </div>
-    <div class="col-6 custborder1 m-3">
-        <app-counter-controls (startTimer)="startTimer()" (pauseOrReset)="pauseOrReset($event)"
-        (timeLeft)="getTimeLimit($event)" [resetStateValue]="timeLeft" [pausedList]="pausedList">
+<div class="d-grid gap-2 d-md-flex justify-content-end mb-3 mt-2">
+  <button type="button" (click)="clearLogs()" class="btn btn-info">Clear All Logs</button>
+</div>
+<div class="row align-items-center">
+  <div class="col-5">
+    <app-counter-display [timeLeft]="timeLeft"></app-counter-display>
+  </div>
+  <div class="col-7">
+    <app-counter-controls (startTimer)="startTimer()" (pauseOrReset)="pauseOrReset($event)"
+      (timeLeft)="getTimeLimit($event)" [resetStateValue]="timeLeft" [pausedList]="pausedList">
     </app-counter-controls>
-    </div>
-    <div class="col-6">
-        <app-counter-logs [eventLogs]="timerEvents"></app-counter-logs>
-    </div>
-    <div class="col-6">
-        <app-counter-clicks [clicksCount]="clicksCount"></app-counter-clicks>
-    </div>
   </div>
-
-
-  <div class="row justify-content-center">
-    <div class="col-4">
-      One of two columns
-    </div>
-    <div class="col-4">
-      One of two columns
-    </div>
+  <div class="col-5 pt-4">
+    <app-counter-logs [eventLogs]="timerEvents"></app-counter-logs>
   </div>
+  <div class="col-7 pt-4">
+    <app-counter-clicks [clicksCount]="clicksCount"></app-counter-clicks>
+  </div>
+</div>

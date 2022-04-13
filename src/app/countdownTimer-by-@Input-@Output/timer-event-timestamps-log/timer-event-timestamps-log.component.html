@@ -1,1 +1,20 @@
-<p>{{eventLogs | json}}</p>
+<!-- <div class="logs-warp">
+    <span><strong>Timestamp Event Logs</strong></span>
+    <ul>
+        <li *ngFor="let log of eventLogs">
+            {{log}}
+        </li>
+    </ul>
+</div> -->
+
+
+<div class="d-grid gap-2  d-md-flex justify-content-center">
+    <div class="logs-warp me-4">
+        <span>Timestamp Event Logs</span>
+        <ul>
+            <li *ngFor="let log of eventLogs">
+                {{log}}
+            </li>
+        </ul>
+    </div>
+</div>
