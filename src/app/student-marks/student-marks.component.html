@@ -1,1 +1,33 @@
-<p>student-marks works!</p>
+<h6>
+    A students marks table dynamically populated from a JSON. Populated the Headings by using the Keys of the Data
+    Object.
+</h6>
+<ol>
+    <li>
+        Upon 1st click on the respective heading, sorting data in Ascending.
+    </li>
+    <li>
+        Upon 2nd click sorting data in Descending.
+    </li>
+    <li>
+        Upon 3rd click reseting the data to initially received state.
+    </li>
+</ol>
+<div class="container mt-4">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th class="head" (click)="sort(key)" *ngFor="let key of tblKeys">
+                    {{key}}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let val of marks">
+                <td *ngFor="let key of tblKeys">
+                    {{val[key]}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
