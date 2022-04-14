@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: '', pathMatch:'full', 
-    loadChildren: () => import('./floating-text/floating-text.module').then(m => m.FloatingTextModule)
-  },
+  { path: "", redirectTo: "/floating-text", pathMatch: "full" },
+  // {
+  //   path: '', 
+  //   loadChildren: () => import('./floating-text/floating-text.module').then(m => m.FloatingTextModule)
+  // },
   {
     path: 'floating-text',
     loadChildren: () => import('./floating-text/floating-text.module').then(m => m.FloatingTextModule)
@@ -19,7 +20,7 @@ const routes: Routes = [
     loadChildren: () => import('./countdownTimer-by-@Input-@Output/countdown-timer-by-input-output.module').then(m => m.CountdownTimerByInputOutputModule)
   },
   {
-    path: 'timer-with-subject',
+    path: 'countdowntimer-with-subject',
     loadChildren: () => import('./countdownTimer-by-subject-in-service/countdown-timer-by-subject-in-service.module').then(m => m.CountdownTimerBySubjectInServiceModule)
   },
   {
